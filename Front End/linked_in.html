@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+      
+      .centered {
+        text-align: center;
+      }
+      
+      #header {
+        display: flex;
+        margin: 0;
+        background-color: #F5F5F5;
+        -webkit-box-shadow: 0px 1px 3px 0px rgba(128,128,128,0.8);
+        -moz-box-shadow: 0px 1px 3px 0px rgba(128,128,128,0.8);
+        box-shadow: 0px 1px 3px 0px rgba(128,128,128,0.8);
+      }
+      
+      #headerLeft {
+        width: 10%;
+      }
+      
+      #headerRight {
+        margin-left: 31.5%;
+        width: 58.5%;
+      }
+      
+      #headerLogo {
+        width: 60%;
+        border-radius: 5px;
+        margin: 15px 0 12px 15px;
+      }
+      
+      #header h1 {
+        margin: 0;
+        padding-top: 20px;
+      }
+      
+      #main {
+        background-color: white;
+        margin-bottom: 40px;
+      }
+      
+      .lightText {
+        color: #888888;
+      }
+      
+      .mainLine {
+        font-size: 18px;
+      }
+      
+      #magnifyingGlass {
+        width: 8%;
+        margin-top: 20px;
+        transform: rotate(270deg);
+      }
+      
+      #blueNum {
+        font-size: 110%;
+        color: #3385ff;
+      }
+      
+      #companies {
+        margin: 30px 0 20px 0;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+      }
+      
+      #companies li {
+        margin-right: 50px;
+      }
+      
+      #companies li img {
+        width: 120px;
+        height: 60px;
+        border-radius: 5px;
+      }
+      
+      #sempra {
+        height: 220px;
+        width: auto;
+      }
+      
+      #amazon {
+        margin-top: 9px;
+      }
+      
+      #searchesButton {
+        width: 150px;
+        height: 50px;
+        background-color: #3385ff;
+        border: none;
+        border-radius: 1px;
+      }
+      
+      #searchesButton p {
+        font-size: 14px;
+        color: white;
+      }
+      
+      #appDiv {
+        height: 180px;
+        padding: 20px 0 20px 0;
+        background-color: #3385ff;
+        color: white;
+        display: flex;
+        overflow: hidden;
+      }
+      
+      #width45 {
+        width: 55%;
+        margin: 0;
+      }
+      
+      #downloadAnchor {
+        height: 50px;
+      }
+      
+      #otherDiv {
+        width: 45%;
+      }
+      
+      #otherDiv img {
+        width: 80%;
+      }
+      
+      #phone {
+        width: 180px;
+        height: 400px;
+        margin-top: -60px;
+      }
+      
+      #download {
+        width: 150px;
+        height: 50px;
+        background-color: white;
+        color: #3385ff;
+        border: none;
+        border-radius: 3px;
+      }
+      
+      #downloadText {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      
+      #footer {
+        background-color: #F5F5F5;
+        color: #888888;
+      }
+      
+      #footerList {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        text-decoration: underline;
+        margin-top: 0;
+        padding-top: 20px;
+      }
+      
+      #footerList li {
+        margin-right: 16px;
+      }
+      
+      #underlines {
+        margin-top: -16px;
+      }
+      
+      
+    </style>
+</head>
+  
+  
+  
+  
+<body>
+
+  <!-- HEADER -->
+  <div id="header">
+    <div id="headerLeft">
+    <img id="headerLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVUJMaWQxLnHZxnf71sxe21f0aihpACj-gjw&s">
+    </div>
+    <div id="headerRight">
+    <h1>Hello User</h1>
+    </div>
+  </div>
+  
+  
+  <!-- MAIN WHITE SECTION -->
+  <div id="main" class="centered">
+    <img id="magnifyingGlass" src="https://img.icons8.com/dotty/512/228BE6/search.png" alt="magnifying glass">
+    <p class="mainLine"><strong>You appeared in</strong><strong id="blueNum">  9+ </strong><strong>searches this week! </strong></p>
+    <p class="lightText">You were found by recruiters from these companies</p>
+    <ul id="companies">
+      <li><img id="sempra" src="https://mma.prnewswire.com/media/1553203/Sempra_Logo.jpg?p=twitter" alt="sempra"></li>   
+      <li><img id="amazon" src="https://www.hatchwise.com/wp-content/uploads/2022/08/Amazon-Logo-2000-present-1024x576.jpeg" alt="amazon"></li>
+      <li><img src="https://www.uicc.org/sites/default/files/styles/original_small/public/thumbnails/image/INDIA_Viatris_Logo_Horiz_RGB_31feecba-9731-46f1-aa92-38da01ad30a3-01.png.webp?itok=d8jYdxVa" alt="viatris"></li>
+    </ul>
+    <a href="{{.URL}}"> <!-- LANDING PAGE HREF HERE -->
+      <button id="searchesButton">
+        <p>See all searches</p>
+      </button>
+    </a>
+  </div>
+  
+  
+  <!-- BLUE IN APP SECTION -->
+  <div id="appDiv" class="centered">
+    <div id="width45">
+      <h2>Get the Linked In App</h2>
+      <p>Stay updated wherever you are.</p>
+        <button id="download">
+          <p id="downloadText">Download for free</p>
+        </button>
+    </div>
+      
+    <div id="otherDiv">
+      <img id="phone" src="https://cdn.icon-icons.com/icons2/1255/PNG/512/1495573732-jd05_84504.png" alt="linked in app">
+    </div>
+  </div>
+    
+    
+  <!-- FOOTER -->
+  <div id="footer" class="centered"> <!-- light grey background -->
+    <ul id="footerList"> <!-- horizontally aligned -->
+      <a href="{{.URL}}"> <!-- LANDING PAGE HREF HERE -->
+        <li><a>Unsubscribe</a></li> <!-- need href -->
+      </a>
+      <li>|</li>
+      <a href="{{.URL}}"> <!-- LANDING PAGE HREF HERE -->
+        <li><a>Help</a></li> <!-- need href -->
+      </a>
+    </ul>
+    <p>You are receiving Linked In notification emails</p>
+    <!-- LINKED IN GREY LOGO IMG HERE -->
+    <p>&copy 2022 Linked In Corporation.1000 W Maude Ave, Sunnyvale, CA 94085, US.</p>
+    <p id="underlines"> ________________________________________________________________________ </P>
+    <p>Linked In and the Linked In logo are registered trademarks of Linked In. You better not use them without consent.
+  </div>
+
+</body>
+</html>
