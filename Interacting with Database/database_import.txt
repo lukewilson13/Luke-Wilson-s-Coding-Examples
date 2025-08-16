@@ -1,0 +1,84 @@
+CREATE SCHEMA IF NOT EXISTS `semplanner`;
+
+USE `semplanner`;
+
+CREATE TABLE role (
+  role_id INT PRIMARY KEY,
+  role_name VARCHAR(100)
+);
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100) NOT NULL UNIQUE,
+  phone VARCHAR(20),
+  password VARCHAR(255) NOT NULL,
+  address VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NULL,
+  role_id VARCHAR(50),
+  status TINYINT DEFAULT 0,
+  active_flag CHAR(1)
+);
+
+CREATE TABLE advisor (
+  advisor_faculty_id INT,
+  advisor_student_id INT,
+  advisor_type INT
+);
+
+CREATE TABLE course (
+  course_id INT PRIMARY KEY,
+  course_number VARCHAR(20),
+  course_name VARCHAR(100),
+  course_credit INT,
+  course_description VARCHAR(500)
+);
+
+CREATE TABLE course_plan (
+  course_plan_id INT PRIMARY KEY,
+  course_plan_user_id INT,
+  course_plan_term_id INT
+);
+
+CREATE TABLE course_offering (
+  course_offering_term_id INT PRIMARY KEY,
+  course_offering_course_id INT,
+  course_offering_term VARCHAR(45)
+);
+
+CREATE TABLE student_plans (
+  std_myplan_id INT AUTO_INCREMENT PRIMARY KEY,
+  std_myplan_name VARCHAR(100),
+  user_id INT,
+  created_at TIMESTAMP,
+  start_date VARCHAR(10),
+  grad_date VARCHAR(10)
+);
+
+CREATE TABLE student_program (
+  student_program_plan_id INT,
+  student_program_program_id INT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE programs (
+  programs_id INT PRIMARY KEY,
+  programs_name VARCHAR(100),
+  programs_type VARCHAR(45),
+  programs_part_of_program INT
+);
+
+CREATE TABLE course_part_of_program (
+  course_part_of_id INT PRIMARY KEY,
+  course_part_of_course_id INT,
+  course_part_of_program_id INT,
+  course_part_of_type INT
+);
+
+CREATE TABLE course_pre_co_req (
+  course_pre_co_req_course_id INT,
+  course_pre_co_rewcol_pc_course_id INT,
+  course_pre_co_req_type INT
+);
