@@ -1,0 +1,78 @@
+CREATE DATABASE IF NOT EXISTS fantasy_fortress;
+USE fantasy_fortress;
+
+-- PLAYER PROFILE
+CREATE TABLE IF NOT EXISTS player_profile (
+    pid VARCHAR(255) PRIMARY KEY,   -- generated ID (string)
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    birth_date DATE,
+    height VARCHAR(10),
+    weight INT,
+    college VARCHAR(255),
+    draft_round VARCHAR(10),        -- sometimes 'udfa'
+    draft_overall_pick VARCHAR(10)  -- sometimes 'udfa'
+);
+
+-- GAMES PLAYED
+CREATE TABLE IF NOT EXISTS games_played (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pid VARCHAR(255),
+    year INT,
+    team_id VARCHAR(10),
+    gp INT,
+    snap_pct VARCHAR(10),
+    FOREIGN KEY (pid) REFERENCES player_profile(pid)
+);
+
+-- PLAYER NUMBERS (jersey numbers)
+CREATE TABLE IF NOT EXISTS player_numbers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pid VARCHAR(255),
+    number VARCHAR(10),
+    FOREIGN KEY (pid) REFERENCES player_profile(pid)
+);
+
+-- RUSHING STATS
+CREATE TABLE IF NOT EXISTS rushing_stats (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pid VARCHAR(255),
+    year INT,
+    team_id VARCHAR(10),
+    rushing_attempts INT,
+    rushing_yards INT,
+    yards_per_attempt FLOAT,
+    rushing_TDs INT,
+    fumbles INT,
+    FOREIGN KEY (pid) REFERENCES player_profile(pid)
+);
+
+-- RECEIVING STATS
+CREATE TABLE IF NOT EXISTS receiving_stats (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pid VARCHAR(255),
+    year INT,
+    team_id VARCHAR(10),
+    receptions INT,
+    targets INT,
+    receiving_yards INT,
+    yards_per_catch FLOAT,
+    receiving_TDs INT,
+    FOREIGN KEY (pid) REFERENCES player_profile(pid)
+);
+
+-- PASSING STATS
+CREATE TABLE IF NOT EXISTS passing_stats (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pid VARCHAR(255),
+    year INT,
+    team_id VARCHAR(10),
+    passing_attempts INT,
+    completions INT,
+    completion_pct FLOAT,
+    passing_yards INT,
+    passing_TDs INT,
+    ints INT,
+    passer_rtg FLOAT,
+    FOREIGN KEY (pid) REFERENCES player_profile(pid)
+);
