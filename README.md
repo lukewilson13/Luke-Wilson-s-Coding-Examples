@@ -2,12 +2,12 @@
 Below are instructions and descriptions for each type of project. I tried to make this as clear as possible, but the environments of some of these projects make viewing them potentially complex. Please let me know if you have any questions or need anything else. Hopefully this is helpful!
 
 ### Front-End
-Unfortunately, this is one of the only examples I currently have for purely front end code (HTML + CSS). This was designed for a phishing simulation on Messiah University students, so it was meant to mimic the Linked In screenshot provided. There may also be some odd verbiage and/or elements since there were supposed to be subtle hints of the page being illegitimate.
+Unfortunately, this is one of the only examples I currently have for purely front-end code (HTML + CSS). This was designed for a phishing simulation on Messiah University students, so it was meant to mimic the LinkedIn screenshot provided. There may also be some odd verbiage and/or elements since there were supposed to be subtle hints of the page being illegitimate.
 
 To be transparent, the use of AI was encouraged for this project. I didn't use it too much since I was trying to mimic a screenshot, but I'm sure that I used it for some quick fixes. I don't view this file as a great example of my front-end development since it was a brief project, but I figured it's better than nothing. My higher-quality projects were from 2023, and I must have deleted them since then.
 
 ### Interacting with Databases
-To properly utilize the semplanner app, you will need to use the SQL code in the "Interacting with Databases" folder to interact with the database. I had to recreate the database since I lost it some time after finishing this project, so there may be some small issues. I tried to fix all of them, but I may have missed some due to rushing. I only submitted a portion of the website as I only wanted to submit what was purely my own work. Therefore, the submitted files are entirely my own code (except for the registration page -- it's necessary for the functionality). 
+To properly utilize the semplanner app, you will need to use the SQL code in the "Interacting with Databases" folder to interact with the database. I had to recreate the database since I lost it some time after finishing this project, so there may be some small issues. I tried to fix all of them, but I may have missed some due to rushing. I only submitted a portion of the website, as I only wanted to submit what was purely my own work. Therefore, the submitted files are entirely my own code (except for the registration page -- it's necessary for the functionality). 
 
 You will need to create accounts in order to view the other pages. Start with the login.php page and follow the "Create an Account" link from there. I recommend creating a student and an advisor account to be able to see both sides of the website. The website isn't very useful without the other files from my groupmates, but it should still give you a good idea of how I interacted with the database.
 
@@ -23,4 +23,6 @@ Below is a link to the instructions for setting up an Expo environment if you wo
 [https://docs.expo.dev/get-started/create-a-project/]
 
 ### Web Scraping to Database
+Similarly to the PHP project, you will need my database schema. I included the SQL code in a text file in the "Web Scraping to Database" directory. I started this project solely out of curiosity. It hasn't gotten past the scraping phase, but I am able to gather a lot of useful data in a dynamic way. I included a "clear table" script so you can quickly wipe the tables. If you don't run this before re-running the main program, you will get errors for duplicate entries.
 
+Again, please feel free to shoot me an email if there is anything else you need from me. Thanks for taking the time to check out my work!
