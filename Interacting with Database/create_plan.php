@@ -9,14 +9,14 @@ $c = $connect->make_connection();
 include 'header.php';
 include 'classes/Checker.php';
 
+$Checker = new Checker($c);
+$Checker->checkAuthentication();
+
 $sql_id = 'SELECT id from users WHERE email = "'.$_SESSION['user_email'].'";';
 $result_id = $c->query($sql_id);
 
 $row_id = $result_id->fetch_assoc();
 $user_id = $row_id['id'];
-
-$Checker = new Checker($c);
-$Checker->checkAuthentication();
 
 function create_plan($c, $plan_name, $start_date, $grad_date, $program_type, $program, $uid, $errors) {
         $sql1 = 'INSERT INTO student_plans
@@ -69,7 +69,7 @@ if ($errors == 0) {
      $course_numberErr = $course_descriptionErr = $course_nameErr = $course_creditErr = "";
      $course_number = $course_description = $course_name = $course_credit = "";
 
-     header('location: plans.php');
+     header('Location: plans.php');
     }
 }
 
