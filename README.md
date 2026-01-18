@@ -1,6 +1,9 @@
 # Instructions + Description for Files
 Below are instructions and descriptions for each type of project. I tried to make this as clear as possible, but the environments of some of these projects make viewing them potentially complex. Please let me know if you have any questions or need anything else. Hopefully this is helpful!
 
+### Senior Project (Coming Soon!)
+I am currently developing a fully functional web portal for a clinic in India. This website will serve as both an internal portal for staff-related functionalities (inventory, prescriptions, analytics, etc.) and an external portal to meet patient needs (viewing appointment history, uploading external lab work, scheduling appointments, etc.). This project has given me vital experience with extracting stakeholder requirements, UI design, database desing, project planning, and most importantly, execution. A video overview of the clinic portal be uploaded to this repository when this project is completed. 
+
 ### Front-End
 Unfortunately, this is one of the only examples I currently have for purely front-end code (HTML + CSS). This was designed for a phishing simulation on Messiah University students, so it was meant to mimic the LinkedIn screenshot provided. There may also be some odd verbiage and/or elements since there were supposed to be subtle hints of the page being illegitimate.
 
